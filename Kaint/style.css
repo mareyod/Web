@@ -1,0 +1,76 @@
+
+
+/* .site-header {  */
+	/* height: 200px; */
+	/* width: 100%; */
+	/* background: url("https://runews24.ru/assets/images/uploads/pictures/2020/10/a156032a14795f93.jpg"); */
+	/* background-size: cover; */
+	/* margin-bottom: 10px; */
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: center; */
+ /* }  */
+
+/* .site-header h1 { */
+	/* color: white; */
+	/* text-transform: uppercase; */
+	/* font-size: 40px; */
+/* } */
+body {
+	background: url("https://catherineasquithgallery.com/uploads/posts/2021-12/1639781269_4-catherineasquithgallery-com-p-rozovo-sirenevii-fon-gradient-6.jpg");
+}
+
+.shapka {
+	display: flex;
+	flex-flow: row nowrap;
+	margin: 0 auto;
+	max-width: 50%;
+	/* background-color: white; */
+	background: url(shapka.png);
+	margin-bottom: 3px;
+}
+
+.shapka div {
+	border: 1px solid black;
+}
+
+.month {
+	flex-grow: 5;
+}
+.calendar-icon {
+	flex-grow: 1;
+	text-align: center;
+}
+.options {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.calendar {
+	display: flex;
+	border: 1px solid black;
+	background-color: white;
+	margin: 0 auto;
+	max-width: 50%;
+	flex-direction: column;
+}
+
+.days-of-the-week {
+	display: flex;
+	flex-flow: row nowrap;
+	flex-grow: 1;
+	justify-content: center;
+}
+
+.days-of-the-week div{
+	border: 1px solid black;
+	flex-grow: 1;
+	text-align: center;
+	
+}
+
+.days {
+	display: flex;
+	flex-grow: 1;
+	height: 500px;
+}
