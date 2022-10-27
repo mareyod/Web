@@ -1,0 +1,9 @@
+@font-face {
+    font-family: SegoeUI;
+    src: url(./fonts/Segoe\ UI.ttf);
+}
+h1{
+    margin: 30px;
+	font-size: 40px;;
+	font-family: SegoeUI;
+}
