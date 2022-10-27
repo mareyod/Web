@@ -1,0 +1,20 @@
+.Palette__pixel{
+    height: 40px;
+	width: 40px;
+	margin: 2px;
+	padding: 2px;
+	background-color: white;
+	border: 1px solid white;
+    font-size: 12px;
+	cursor: pointer;
+}
+.Palette__pixel:hover {
+	border: 1px solid blue; 
+	box-shadow: 0 0 2px blue;
+}
+.Palette__pixel:active{
+	border: 1px solid black;
+}
+.Palette__pixel:focus {
+	border: 1px solid blue;
+}
