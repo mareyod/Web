@@ -1,0 +1,9 @@
+.Palette{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    width: 320px;
+	height: 270px;
+    border: 1px solid black;
+}
