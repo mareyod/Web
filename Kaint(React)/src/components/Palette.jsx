@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../styles/Palette.css";
-import Canvas__pixel from "./CanvasPixel";
 import PalettePixel from "./PalettePixel";
 
 const Palette = (props) => {
@@ -22,23 +21,17 @@ const Palette = (props) => {
     let table = [];
     let row = [];
     
-   
+    const getBackgroundColor = (event) => {
+      props.onClick(event.target.style.backgroundColor);
+    }
+  
     const PalettePixels = PixelColors.map(PixelColor =>
-      <PalettePixel onClick = {(event) => {props.onClick(event.target.style.backgroundColor)}} pixelColor = {PixelColor.color} key = {PixelColor.id}/>
+      <PalettePixel onClick = {getBackgroundColor} pixelColor = {PixelColor.color} key = {PixelColor.id}/>
     );
 
-    for(let i = 0; i < rows; i++)
-    {
-          for(let j = 0; j < columns; j++)
-          {
-            row.push(<td>{PalettePixels[i*(columns-1)+j]}</td>);
-          }
-        table.push(<tr>{row}</tr>);
-        row = [];
-    }
   return (
     <div className="Palette">
-        {table}
+        {PalettePixels}
     </div>
   );
 }

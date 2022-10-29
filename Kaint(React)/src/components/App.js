@@ -9,7 +9,7 @@ function App() {
 
   const [canvasSize, setCanvasSize] = useState();
   const getCanvasSize = (canvasSize) => {
-    if (canvasSize < 15) {
+    if (canvasSize < 15 && canvasSize >= 0) {
       setCanvasSize(canvasSize);
     }
   }

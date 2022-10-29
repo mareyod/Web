@@ -22,7 +22,7 @@ const Navigation = (props) => {
         props.clearCount(clearCount);
     }
     return (
-        <div>
+        <div className="Navigation">
             <MyInput
                 type="number"
                 id="size"

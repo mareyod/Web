@@ -1,9 +1,10 @@
-@font-face {
-    font-family: SegoeUI;
+/* @font-face {
+    font-family: Segoe UI;
     src: url(./fonts/Segoe\ UI.ttf);
-}
+} */
 h1{
     margin: 30px;
-	font-size: 40px;;
-	font-family: SegoeUI;
+	font-size: 40px;
+	font-family: Segoe UI;
+    font-weight: normal;
 }

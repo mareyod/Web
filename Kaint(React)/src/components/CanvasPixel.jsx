@@ -18,7 +18,6 @@ const CanvasPixel = ({ pixelColor, drawPermission, clearCount, canvasSize }) => 
   const changeColorDown = (event) => {
     event.target.style.backgroundColor = pixelColor;
   }
-  console.log("pixel rendered");
 
 return (
   <div>

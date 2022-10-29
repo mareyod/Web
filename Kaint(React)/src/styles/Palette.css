@@ -1,9 +1,4 @@
 .Palette{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-    width: 340px;
-	height: 340px;
-    border: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(6, 50px);
 }
