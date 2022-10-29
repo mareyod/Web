@@ -1,4 +1,4 @@
-.Palette__pixel{
+.PalettePixel{
     height: 40px;
 	width: 40px;
 	margin: 2px;
@@ -8,13 +8,13 @@
     font-size: 12px;
 	cursor: pointer;
 }
-.Palette__pixel:hover {
+.PalettePixel:hover {
 	border: 1px solid blue; 
 	box-shadow: 0 0 2px blue;
 }
-.Palette__pixel:active{
+.PalettePixel:active{
 	border: 1px solid black;
 }
-.Palette__pixel:focus {
+.PalettePixel:focus {
 	border: 1px solid blue;
 }

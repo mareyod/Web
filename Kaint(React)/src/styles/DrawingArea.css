@@ -1,7 +1,7 @@
 .DrawingArea{
     display: flex;
-	height: 310px;
-    min-width: 640px;
+	height: 400px;
+    min-width: 680px;
 	margin: 30px;
 	justify-content: space-around;
 	align-items: center;

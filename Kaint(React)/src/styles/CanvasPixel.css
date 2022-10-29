@@ -1,7 +1,10 @@
-.Canvas__pixel{
+.CanvasPixel{
     height: 20px;
 	width: 20px;
 	background-color: white;
 	border: 1px solid black;
     font-size: 12px;
+}
+div{
+	background-color: white;
 }

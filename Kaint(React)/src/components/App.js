@@ -1,36 +1,41 @@
-// import logo from './logo.svg';
-import '../styles/App.css';
-import React , {useState} from "react";
+import "../styles/App.css";
+import React, { useState } from "react";
 import Text from "./Text.jsx";
 import DrawingArea from "./DrawingArea.jsx";
 import Navigation from "./Navigation.jsx";
 
 function App() {
 
-  // const [size, setSize] = useState();
-  // const getSize = (size) =>{
-  //     setSize(size);
-  // }
 
-  // const[permission, setPermission] = useState();
-  // const getPermission = (permission) =>{
-  //   setPermission(permission)
-  // }
-
-  const [size, setSize] = useState();
-    const getSize = (size) => {
-      if(size < 15)
-      {
-        setSize(size);
-      }
+  const [canvasSize, setCanvasSize] = useState();
+  const getCanvasSize = (canvasSize) => {
+    if (canvasSize < 15) {
+      setCanvasSize(canvasSize);
     }
+  }
+  
+  const [clearCount, setClearCount] = useState();
+  const getClearCount = (clearCount) => {
+    setClearCount(clearCount);
+  }
+
 
   return (
     <div className="App">
-    <Text />
-    <DrawingArea CanvasSize = {size}/>
-    <Navigation  DrawCanvas = {getSize}/>
-    
+
+      <Text />
+
+      <DrawingArea
+        canvasSize={canvasSize}
+        clearCount={clearCount}
+      />
+
+      <Navigation
+        canvasSize={getCanvasSize}
+        clearCount={getClearCount}
+
+      />
+
     </div>
   );
 }
