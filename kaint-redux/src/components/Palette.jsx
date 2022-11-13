@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "../styles/Palette.css";
 import "../styles/PalettePixel.css";
 import { useDispatch } from "react-redux";
+import { changeColorAction } from "../store/backgroundColorReducer";
 
 const Palette = () => {
-  console.log("Palette render");
+  
   const [PixelColors, setPixelColors] = useState([
     { id: 1, color: "#FF3F3F" }, { id: 2, color: "#FE5454" }, { id: 3, color: "#E27878" },
     { id: 4, color: "#FF9B94" }, { id: 5, color: "#FD7B69" }, { id: 6, color: "#F65742" },
@@ -19,14 +20,10 @@ const Palette = () => {
   ])
 
   const dispatch = useDispatch();
+
   const getBackgroundColor = (event) => {
-    dispatch({
-      type: "CHANGE_COLOR",
-      color: event.target.style.backgroundColor
-    })
-
+    dispatch(changeColorAction(event.target.style.backgroundColor))
   }
-
 
   const PalettePixels = PixelColors.map(PixelColor =>
     <div

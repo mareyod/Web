@@ -4,7 +4,6 @@ import DrawingArea from "./DrawingArea.jsx";
 import Navigation from "./Navigation.jsx";
 
 function App() {
-  console.log("App render");
 
   return (
     <div className="App">

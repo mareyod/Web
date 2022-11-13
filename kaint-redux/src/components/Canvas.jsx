@@ -4,9 +4,10 @@ import "../styles/Canvas.css";
 import CanvasRow from "./CanvasRow";
 
 const Canvas = () => {
-  console.log("Canvas render");
+
+  const canvasSize = useSelector(state => state.sizeReducer.size);
+  
   let table = [];
-  const canvasSize = useSelector(state =>state.size);
   for (let i = 0; i < canvasSize; i++) {
     table.push( 
     <CanvasRow key={i} />  

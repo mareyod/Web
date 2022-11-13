@@ -4,7 +4,6 @@ import Canvas from "./Canvas";
 import Palette from "./Palette";
 
 const DrawingArea = () => {
-  console.log("DrawingArea render");
 
   return (
     <div className="DrawingArea">

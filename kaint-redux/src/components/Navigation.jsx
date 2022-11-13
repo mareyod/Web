@@ -3,28 +3,23 @@ import "../styles/Navigation.css";
 import "../styles/MyInput.css";
 import "../styles/Button.css";
 import { useDispatch } from "react-redux";
+import { clearCanvasAction} from "../store/clearCountReducer";
+import { changeSizeAction } from "../store/sizeReducer";
 const Navigation = () => {
 
-    console.log("Navigation render");
+    const dispatch = useDispatch();
 
     const inputValue = useRef(0);
     const getInputValue = (event) => {
         inputValue.current = event.target.value;
     }
 
-    const dispatch = useDispatch();
-
     const changeSize = () => {
-        dispatch({
-            type: "CHANGE_SIZE",
-            size: inputValue.current
-        })
+        dispatch(changeSizeAction(inputValue.current))
     }
 
     const clearCanvas = () => {
-        dispatch({
-            type: "CLEAR_CANVAS"
-        })
+        dispatch(clearCanvasAction())
     }
 
     return (

@@ -4,9 +4,10 @@ import { useSelector } from "react-redux";
 import CanvasPixel from "./CanvasPixel";
 
 const CanvasRow = () => {
-    console.log("CanvasRow render");
+
+    const canvasSize = useSelector(state => state.sizeReducer.size);
+    
     let row = [];
-    const canvasSize = useSelector(state =>state.size);
     for (let i = 0; i < canvasSize; i++) {
         row.push( <CanvasPixel key = {i}/> ) 
     }
