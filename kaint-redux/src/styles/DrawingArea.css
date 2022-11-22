@@ -1,0 +1,10 @@
+.DrawingArea{
+    display: flex;
+	height: 400px;
+    min-width: 680px;
+	margin: 30px;
+	justify-content: space-around;
+	align-items: center;
+    align-self: stretch;
+	flex-direction: row;
+}
