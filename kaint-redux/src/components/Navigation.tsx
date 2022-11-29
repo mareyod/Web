@@ -3,22 +3,23 @@ import "../styles/Navigation.css";
 import "../styles/MyInput.css";
 import "../styles/Button.css";
 import { useDispatch } from "react-redux";
-import { clearCanvasAction} from "../store/clearCountReducer";
-import { changeSizeAction } from "../store/sizeReducer";
+import { clearCanvasAction} from "../store/clearCountReducer.tsx";
+import { changeSizeAction } from "../store/sizeReducer.tsx";
+import { useAppDispatch } from "../hooks/Dispatch.tsx";
 const Navigation = () => {
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
-    const inputValue = useRef(0);
-    const getInputValue = (event) => {
-        inputValue.current = event.target.value;
+    const inputValue = useRef<HTMLInputElement | null>(null);
+    const getInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+        inputValue.current = event.target.value;////////////////////////////////////////////////////
     }
 
-    const changeSize = () => {
+    const changeSize = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         dispatch(changeSizeAction(inputValue.current))
     }
 
-    const clearCanvas = () => {
+    const clearCanvas = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         dispatch(clearCanvasAction())
     }
 
@@ -27,6 +28,7 @@ const Navigation = () => {
 
             <input
                 className="SizeInput"
+                ref = {inputValue}
                 type="number"
                 id="size"
                 max="14"
