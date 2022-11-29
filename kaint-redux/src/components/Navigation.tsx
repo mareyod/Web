@@ -10,9 +10,9 @@ const Navigation = () => {
 
     const dispatch = useAppDispatch();
 
-    const inputValue = useRef<HTMLInputElement | null>(null);
+    const inputValue = useRef<string>();///////////
     const getInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-        inputValue.current = event.target.value;////////////////////////////////////////////////////
+        inputValue.current = event.target.value;
     }
 
     const changeSize = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -28,7 +28,6 @@ const Navigation = () => {
 
             <input
                 className="SizeInput"
-                ref = {inputValue}
                 type="number"
                 id="size"
                 max="14"

@@ -17,6 +17,7 @@ const CanvasPixel = () => {
 
   const changeColorEnter = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (drawPermission) {
+      //event.target.style.backgroundColor = pixelColor;
       (event.target as HTMLDivElement).style.backgroundColor = pixelColor;/////////
     }
   }

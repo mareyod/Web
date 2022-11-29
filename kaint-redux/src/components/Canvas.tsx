@@ -7,6 +7,7 @@ import { RootState } from "../store";
 
 const Canvas: FC = () => {
 
+ //const canvasSize = useAppSelector(state => state.sizeReducer.size);
   const canvasSize = useAppSelector((state: RootState) => state.sizeReducer.size);/////////////////////////////
 
   let table: CanvasRow[] = [];
