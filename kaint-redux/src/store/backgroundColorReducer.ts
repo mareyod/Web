@@ -1,15 +1,16 @@
-export type defaultStateType = {
+type defaultStateType = {
   backgroundColor: string
 }
-const defaultState: defaultStateType = {
-    backgroundColor: 'white'
-}
-
-const CHANGE_COLOR = "CHANGE_COLOR"
 type changeColorActionType = {
   type: typeof CHANGE_COLOR,
   color: string
 }
+
+const defaultState: defaultStateType = {
+    backgroundColor: 'white'
+}
+const CHANGE_COLOR = "CHANGE_COLOR"
+
 
 export const backgroundColorReducer = (state = defaultState, action:changeColorActionType): defaultStateType => {
     switch (action.type) {

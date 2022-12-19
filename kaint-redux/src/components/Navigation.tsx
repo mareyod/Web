@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import "../styles/Navigation.css";
 import "../styles/MyInput.css";
 import "../styles/Button.css";
-import { useDispatch } from "react-redux";
 import { clearCanvasAction} from "../store/clearCountReducer";
 import { changeSizeAction } from "../store/sizeReducer";
 import { useAppDispatch } from "../hooks/Dispatch";
@@ -10,13 +9,13 @@ const Navigation = () => {
 
     const dispatch = useAppDispatch();
 
-    const inputValue = useRef<string>();///////////
+    const inputValue = useRef<string | number >();
     const getInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
         inputValue.current = event.target.value;
     }
 
     const changeSize = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        dispatch(changeSizeAction(inputValue.current))
+        dispatch(changeSizeAction(inputValue.current as number))
     }
 
     const clearCanvas = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {

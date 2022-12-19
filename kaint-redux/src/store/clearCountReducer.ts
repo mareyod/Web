@@ -1,12 +1,14 @@
 type defaultStateType = {
   clearCount: boolean
 }
-const defaultState: defaultStateType = {
-    clearCount: false
-}
 type clearCanvasActionType = {
   type: typeof CLEAR_CANVAS,
 }
+
+const defaultState: defaultStateType = {
+    clearCount: false
+}
+
 const CLEAR_CANVAS = "CLEAR_CANVAS"
 
 export const clearCountReducer = (state = defaultState, action:clearCanvasActionType):defaultStateType => {

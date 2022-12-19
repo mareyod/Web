@@ -1,12 +1,14 @@
 type defaultStateType = {
   drawPermission: boolean
 }
-const defaultState: defaultStateType = {
-    drawPermission: false
-}
+
 type changeDrawPermissionActionType = {
   type: typeof CHANGE_DRAWPERMISSION,
   drawPermission: boolean
+}
+
+const defaultState: defaultStateType = {
+    drawPermission: false
 }
 const CHANGE_DRAWPERMISSION = "CHANGE_DRAWPERMISSION"
 
@@ -21,4 +23,4 @@ export const drawPermissionReducer = (state = defaultState, action:changeDrawPer
     }
   }
 
-  export const changeDrawPermissionAction = (drawPermission: boolean) => ({type: CHANGE_DRAWPERMISSION, drawPermission})
+  export const changeDrawPermissionAction = (drawPermission: boolean):changeDrawPermissionActionType => ({type: CHANGE_DRAWPERMISSION, drawPermission})
