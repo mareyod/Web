@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../styles/Palette.css";
 import "../styles/PalettePixel.css";
 import { useDispatch } from "react-redux";
-import { changeColorAction } from "../store/backgroundColorReducer.tsx";
-import { useAppDispatch } from "../hooks/Dispatch.tsx";
+import { changeColorAction } from "../store/backgroundColorReducer";
+import { useAppDispatch } from "../hooks/Dispatch";
 
 const PixelColors = [
   { id: 1, color: "#FF3F3F" }, { id: 2, color: "#FE5454" }, { id: 3, color: "#E27878" },

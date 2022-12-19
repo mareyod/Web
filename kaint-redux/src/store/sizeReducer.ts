@@ -13,8 +13,8 @@ export const sizeReducer = (state = defaultState, action:changeSizeActionType): 
     switch (action.type) {
   
       case CHANGE_SIZE:
-        if (action.size < 15)
-          return { ...state, size: action.size }
+        if (action.size < 15){
+          return { ...state, size: action.size }}
   
       default:
         return state

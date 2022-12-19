@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/Row.css";
 import { useSelector } from "react-redux";
-import CanvasPixel from "./CanvasPixel.tsx";
-import { useAppSelector } from "../hooks/Selector.tsx";
+import CanvasPixel from "./CanvasPixel";
+import { useAppSelector } from "../hooks/Selector";
 
 const CanvasRow = () => {
 

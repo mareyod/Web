@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/DrawingArea.css";
-import Canvas from "./Canvas.tsx";
-import Palette from "./Palette.tsx";
+import Canvas from "./Canvas";
+import Palette from "./Palette";
 
 const DrawingArea = () => {
 

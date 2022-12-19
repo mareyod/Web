@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/CanvasPixel.css";
 import { useSelector, useDispatch } from "react-redux";
-import { changeDrawPermissionAction } from "../store/drawPermissionReducer.tsx";
-import { useAppSelector } from "../hooks/Selector.tsx";
-import { useAppDispatch } from "../hooks/Dispatch.tsx";
+import { changeDrawPermissionAction } from "../store/drawPermissionReducer";
+import { useAppSelector } from "../hooks/Selector";
+import { useAppDispatch } from "../hooks/Dispatch";
 
 const CanvasPixel = () => {
 

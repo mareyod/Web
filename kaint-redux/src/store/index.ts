@@ -1,8 +1,8 @@
 import { createStore, combineReducers } from 'redux';
-import { backgroundColorReducer } from './backgroundColorReducer.tsx';
-import { clearCountReducer } from './clearCountReducer.tsx';
-import { drawPermissionReducer } from './drawPermissionReducer.tsx';
-import { sizeReducer } from './sizeReducer.tsx';
+import { backgroundColorReducer } from './backgroundColorReducer';
+import { clearCountReducer } from './clearCountReducer';
+import { drawPermissionReducer } from './drawPermissionReducer';
+import { sizeReducer } from './sizeReducer';
 
 const rootReducer = combineReducers( {
     backgroundColorReducer,

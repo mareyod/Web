@@ -3,9 +3,9 @@ import "../styles/Navigation.css";
 import "../styles/MyInput.css";
 import "../styles/Button.css";
 import { useDispatch } from "react-redux";
-import { clearCanvasAction} from "../store/clearCountReducer.tsx";
-import { changeSizeAction } from "../store/sizeReducer.tsx";
-import { useAppDispatch } from "../hooks/Dispatch.tsx";
+import { clearCanvasAction} from "../store/clearCountReducer";
+import { changeSizeAction } from "../store/sizeReducer";
+import { useAppDispatch } from "../hooks/Dispatch";
 const Navigation = () => {
 
     const dispatch = useAppDispatch();

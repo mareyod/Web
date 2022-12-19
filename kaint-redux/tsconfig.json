@@ -1,0 +1,11 @@
+{
+  "extends": "@tsconfig/create-react-app/tsconfig.json",
+  "compilerOptions": {
+
+    "target": "es2016",                               
+    "module": "commonjs",                                
+    "forceConsistentCasingInFileNames": true,            
+    "strict": true,                                      
+    "skipLibCheck": true                                
+  }
+}
