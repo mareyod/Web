@@ -1,9 +1,10 @@
+import {FC} from "react";
 import "../styles/App.css";
 import "../styles/Text.css";
-import DrawingArea from "./DrawingArea.jsx";
-import Navigation from "./Navigation.jsx";
+import DrawingArea from "./DrawingArea";
+import Navigation from "./Navigation";
 
-function App() {
+const App: FC = () => {
 
   return (
     <div className="App">

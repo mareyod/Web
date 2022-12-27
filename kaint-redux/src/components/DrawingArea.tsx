@@ -1,9 +1,9 @@
-import React from "react";
+import {FC} from "react";
 import "../styles/DrawingArea.css";
 import Canvas from "./Canvas";
 import Palette from "./Palette";
 
-const DrawingArea = () => {
+const DrawingArea: FC = () => {
 
   return (
     <div className="DrawingArea">

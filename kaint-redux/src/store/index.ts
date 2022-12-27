@@ -4,7 +4,6 @@ import { clearCountReducer } from './clearCountReducer';
 import { drawPermissionReducer } from './drawPermissionReducer';
 import { sizeReducer } from './sizeReducer';
 
-
 const rootReducer = combineReducers( {
     backgroundColorReducer,
     clearCountReducer,
@@ -13,3 +12,5 @@ const rootReducer = combineReducers( {
 })
 
 export const store = createStore(rootReducer);
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch;

@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import {FC, MouseEvent} from "react";
 import "../styles/Palette.css";
 import "../styles/PalettePixel.css";
-import { useDispatch } from "react-redux";
 import { changeColorAction } from "../store/backgroundColorReducer";
+import { useAppDispatch } from "../hooks/Dispatch";
 
-const Palette = () => {
-  
-  const [PixelColors, setPixelColors] = useState([
-    { id: 1, color: "#FF3F3F" }, { id: 2, color: "#FE5454" }, { id: 3, color: "#E27878" },
+const PixelColors = [
+  { id: 1, color: "#FF3F3F" }, { id: 2, color: "#FE5454" }, { id: 3, color: "#E27878" },
     { id: 4, color: "#FF9B94" }, { id: 5, color: "#FD7B69" }, { id: 6, color: "#F65742" },
     { id: 7, color: "#FF842B" }, { id: 8, color: "#FE6636" }, { id: 9, color: "#EE8A52" },
     { id: 10, color: "#FF9F45" }, { id: 11, color: "#FFC450" }, { id: 12, color: "#FFB55F" },
@@ -16,13 +14,16 @@ const Palette = () => {
     { id: 19, color: "#009A06" }, { id: 20, color: "#94C15B" }, { id: 21, color: "#13A467" },
     { id: 22, color: "#4AB9AC" }, { id: 23, color: "#8FC8D0" }, { id: 24, color: "#5197BE" },
     { id: 25, color: "#3F78E7" }, { id: 26, color: "#5065AF" }, { id: 27, color: "#6684A0" },
-    { id: 28, color: "#9699E2" }, { id: 29, color: "#6657A4" }, { id: 30, color: "#8128A0" },
-  ])
+    { id: 28, color: "#9699E2" }, { id: 29, color: "#6657A4" }, { id: 30, color: "#8128A0" }
+]
 
-  const dispatch = useDispatch();
+const Palette: FC = () => {
 
-  const getBackgroundColor = (event) => {
-    dispatch(changeColorAction(event.target.style.backgroundColor))
+
+  const dispatch = useAppDispatch();
+
+  const getBackgroundColor = (event: MouseEvent<HTMLDivElement>) => {
+    dispatch(changeColorAction((event.target as HTMLDivElement).style.backgroundColor))
   }
 
   const PalettePixels = PixelColors.map(PixelColor =>
