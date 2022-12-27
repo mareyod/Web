@@ -1,4 +1,4 @@
-import React from "react";
+import {FC, MouseEvent} from "react";
 import "../styles/Palette.css";
 import "../styles/PalettePixel.css";
 import { changeColorAction } from "../store/backgroundColorReducer";
@@ -17,12 +17,12 @@ const PixelColors = [
     { id: 28, color: "#9699E2" }, { id: 29, color: "#6657A4" }, { id: 30, color: "#8128A0" }
 ]
 
-const Palette = () => {
+const Palette: FC = () => {
 
 
   const dispatch = useAppDispatch();
 
-  const getBackgroundColor = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const getBackgroundColor = (event: MouseEvent<HTMLDivElement>) => {
     dispatch(changeColorAction((event.target as HTMLDivElement).style.backgroundColor))
   }
 

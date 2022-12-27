@@ -1,24 +1,24 @@
-import React, { useRef } from "react";
+import { useRef, FC, MouseEvent, ChangeEvent } from "react";
 import "../styles/Navigation.css";
 import "../styles/MyInput.css";
 import "../styles/Button.css";
 import { clearCanvasAction} from "../store/clearCountReducer";
 import { changeSizeAction } from "../store/sizeReducer";
 import { useAppDispatch } from "../hooks/Dispatch";
-const Navigation = () => {
+const Navigation: FC = () => {
 
     const dispatch = useAppDispatch();
 
-    const inputValue = useRef<string | number >();
-    const getInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = useRef<string>();
+    const getInputValue = (event: ChangeEvent<HTMLInputElement>) => {
         inputValue.current = event.target.value;
     }
 
-    const changeSize = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        dispatch(changeSizeAction(inputValue.current as number))
+    const changeSize = (event: MouseEvent<HTMLDivElement>) => {
+        dispatch(changeSizeAction(Number(inputValue.current)))
     }
 
-    const clearCanvas = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const clearCanvas = (event: MouseEvent<HTMLDivElement>) => {
         dispatch(clearCanvasAction())
     }
 
@@ -30,6 +30,7 @@ const Navigation = () => {
                 type="number"
                 id="size"
                 max="14"
+                min="0"
                 placeholder="Размер (<15)"
                 onChange={getInputValue}
             />

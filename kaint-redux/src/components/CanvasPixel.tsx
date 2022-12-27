@@ -1,10 +1,10 @@
-import React from "react";
+import {FC, MouseEvent} from "react";
 import "../styles/CanvasPixel.css";
 import { changeDrawPermissionAction } from "../store/drawPermissionReducer";
 import { useAppSelector } from "../hooks/Selector";
 import { useAppDispatch } from "../hooks/Dispatch";
 
-const CanvasPixel = () => {
+const CanvasPixel: FC = () => {
 
 
   const canvasSize = useAppSelector(state => state.sizeReducer.size);
@@ -14,13 +14,13 @@ const CanvasPixel = () => {
   const dispatch = useAppDispatch();
   
 
-  const changeColorEnter = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const changeColorEnter = (event: MouseEvent<HTMLDivElement>) => {
     if (drawPermission) {
       (event.target as HTMLDivElement).style.backgroundColor = pixelColor;
     }
   }
 
-  const handleMouseDown = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleMouseDown = (event: MouseEvent<HTMLDivElement>) => {
     permitDraw();
     changeColorDown(event);
   }
@@ -28,7 +28,7 @@ const CanvasPixel = () => {
   const permitDraw = () => {
     dispatch(changeDrawPermissionAction(true))
   }
-  const changeColorDown = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const changeColorDown = (event: MouseEvent<HTMLDivElement>) => {
     (event.target as HTMLDivElement).style.backgroundColor = pixelColor;
   }
 
